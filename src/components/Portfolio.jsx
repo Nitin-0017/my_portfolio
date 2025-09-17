@@ -1,13 +1,12 @@
-// Projects.jsx
 import React from "react";
 import "../styles/Portfolio.css";
 
 const projects = [
   {
-    title: "",
+    title: "Weather App",
     description: "A web app that fetches live weather data based on location, displaying temperature, humidity, and forecasts.",
     tech: ["HTML", "CSS", "JavaScript", "API"],
-    image: "/projects/weather-app.png",
+    image: "./calculator.png",
     github: "#",
     live: "#"
   },
@@ -15,15 +14,31 @@ const projects = [
     title: "Resume Shortlister",
     description: "An application to automatically filter and shortlist resumes based on keywords and skills for recruiters.",
     tech: ["React", "Node.js", "MongoDB"],
-    image: "/projects/resume-shortlister.png",
+    image: "./swifkart.png",
     github: "#",
     live: "#"
   },
   {
     title: "Memphis Design",
-    description: "A Design made to get an experience of applying CSS in a project",
+    description: "A design project made to experiment with applying CSS creatively.",
     tech: ["HTML", "CSS"],
-    image: "/projects/dot-boxes.png",
+    image: "./memphisdesign.png",
+    github: "#",
+    live: "#"
+  },
+  {
+    title: "Portfolio Website",
+    description: "Personal portfolio built with React showcasing projects, skills, and resume.",
+    tech: ["React", "CSS", "JavaScript"],
+    image: "./bmicalculator.png",
+    github: "#",
+    live: "#"
+  },
+  {
+    title: "Task Manager",
+    description: "A productivity app for creating, updating, and organizing daily tasks with local storage support.",
+    tech: ["React", "Bootstrap"],
+    image: "./inventory.png",
     github: "#",
     live: "#"
   }
@@ -34,7 +49,7 @@ const Projects = () => {
     <section className="projects" id="portfolio">
       <div className="projects-container">
         <h2>My Projects</h2>
-        <div className="projects-grid">
+        <div className="projects-flex">
           {projects.map((project, index) => (
             <div className="project-card" key={index}>
               <div className="project-image">
