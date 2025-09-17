@@ -1,39 +1,91 @@
 .hero {
-    height: 100vh;
-    background: url("/images/hero-bg.jpg") no-repeat center center/cover;
+    position: relative;
+    margin-left: 270px; /* Sidebar ke saath gap */
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
+    padding: 0 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
   }
   
-  .hero-container h1 {
+  /* Background image full cover */
+  .hero-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.4); /* Dark overlay effect */
+    transition: transform 0.5s ease;
+  }
+  
+  .hero-background img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Additional overlay for better contrast */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* extra dark overlay */
+    z-index: 2;
+  }
+  
+  /* Hero content above image & overlay */
+  .hero-content {
+    position: relative;
+    z-index: 3; /* content above image */
+    max-width: 600px;
+  }
+  
+  /* Original text styling maintained */
+  .hero-title {
     font-size: 48px;
-    margin-bottom: 15px;
+    font-weight: 700;
+    color: #a3f2ed; /* Title color maintained */
+    margin-bottom: 20px;
   }
   
-  .hero-container h1 span {
-    color: #007bff;
-  }
-  
-  .hero-container h2 {
-    font-size: 24px;
+  .hero-subtitle {
+    font-size: 18px;
+    color: #ddd; /* Subtitle color maintained */
     margin-bottom: 30px;
+    line-height: 1.6;
   }
   
   .hero-btn {
     display: inline-block;
-    padding: 12px 30px;
-    background: #007bff;
-    color: #fff;
+    padding: 12px 25px;
+    background: #a3f2ed; /* Button color maintained */
+    color: #111;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
   }
   
   .hero-btn:hover {
-    background: #0056b3;
+    background: #0d0c0a;
+    color: #a3f2ed;
+    transform: translateY(-3px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero {
+      flex-direction: column;
+      padding: 30px 20px;
+      margin-left: 250px; /* maintain alignment with sidebar */
+    }
+  
+    .hero-content {
+      text-align: center;
+    }
   }
   

@@ -1,51 +1,145 @@
 .resume {
-    padding: 80px 20px;
-    background: #f9f9f9;
+    padding: 100px 40px;
+    background: #f5f5f5;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a;
+    margin-left: 220px; /* left navbar ke liye jagah */
   }
   
   .resume-container {
-    max-width: 900px;
+    max-width: 800px;
     margin: auto;
   }
   
+  /* Section Title */
   .resume-container h2 {
     text-align: center;
-    font-size: 28px;
-    margin-bottom: 40px;
-    color: #333;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 70px;
+    color: #222;
+    position: relative;
   }
   
+  .resume-container h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 14px auto 0;
+    background: linear-gradient(90deg, #003366, #00c6ff);
+    border-radius: 2px;
+  }
+  
+  /* Each Section (Education, Experience) */
   .resume-section {
-    margin-bottom: 40px;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 70px;
   }
   
+  /* Section Heading */
   .resume-section h3 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 35px;
+    color: #003366;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
   }
   
+  /* Timeline Line */
+  .resume-section::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #003366;
+  }
+  
+  /* Timeline Item */
   .resume-item {
-    margin-bottom: 20px;
-    padding-left: 20px;
-    border-left: 3px solid #007bff;
+    position: relative;
+    margin-bottom: 40px;
+    padding: 20px 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
+  .resume-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Timeline Dot */
+  .resume-item::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 28px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #003366;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #00336633;
+  }
+  
+  /* Item Content */
   .resume-item h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: #333;
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: #222;
+    font-weight: 600;
   }
   
   .resume-item h5 {
     font-size: 15px;
-    margin-bottom: 10px;
+    font-weight: 500;
+    margin-bottom: 12px;
     color: #666;
   }
   
   .resume-item p {
     margin-bottom: 10px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #444;
   }
   
+  .resume-item em {
+    font-style: normal;
+    font-weight: 600;
+    color: #003366;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .resume {
+      margin-left: 0; /* navbar chhoti screen me hide ho sakti hai */
+      padding: 60px 20px;
+    }
+  
+    .resume-container h2 {
+      font-size: 30px;
+    }
+  
+    .resume-section {
+      padding-left: 30px;
+    }
+  
+    .resume-item {
+      padding: 18px 20px;
+    }
+  
+    .resume-item::before {
+      left: -22px;
+      top: 24px;
+      width: 12px;
+      height: 12px;
+    }
+  }

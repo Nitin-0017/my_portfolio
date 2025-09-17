@@ -1,18 +1,18 @@
-/* Sidebar main */
+/* Sidebar Layout */
 .sidebar {
     position: fixed;
-    top: 0;
     left: 0;
-    width: 240px;
-    height: 100vh;
-    background: #1d1d1d;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #0d1117;
+    padding: 25px 20px;
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 15px;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
-    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   /* Profile Section */
@@ -25,69 +25,106 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    border: 3px solid #1f232a;
     object-fit: cover;
-    border: 3px solid #007bff;
     margin-bottom: 15px;
+    transition: transform 0.3s;
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.05);
   }
   
   .profile-name {
     font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
   }
   
-  .profile-role {
-    font-size: 14px;
+  /* Social Links */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 25px;
+  }
+  
+  .social-links a {
+    width: 40px;
+    height: 40px;
+    background: #1b1f27;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #aaa;
+    font-size: 20px;
+    transition: all 0.3s ease;
   }
   
-  /* Nav Menu */
+  .social-links a:hover {
+    background: #00aaff;
+    color: #fff;
+    transform: translateY(-4px) scale(1.1);
+  }
+  
+  /* Navigation Menu */
   .nav-menu {
-    flex-grow: 1;
     width: 100%;
+    margin-top: 20px;
   }
   
   .nav-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
   }
   
-  .nav-menu ul li {
-    margin: 15px 0;
-    text-align: center;
+  .nav-menu li {
+    margin: 18px 0;
   }
   
-  .nav-menu ul li a {
-    text-decoration: none;
-    color: #ccc;
-    font-size: 16px;
-    transition: color 0.3s;
-  }
-  
-  .nav-menu ul li a:hover {
-    color: #007bff;
-  }
-  
-  /* Social Links */
-  .social-links {
-    margin-top: auto;
+  .nav-menu a {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 14px;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
   }
   
-  .social-links a {
-    color: #ccc;
-    font-size: 14px;
-    transition: color 0.3s;
+  .nav-menu a:hover {
+    background: #1b1f27;
+    color: #00aaff;
+    transform: translateX(4px);
   }
   
-  .social-links a:hover {
-    color: #007bff;
+  .icon {
+    font-size: 18px;
   }
   
-  /* Page content padding (important for sidebar layout) */
-  body {
-    margin-left: 240px; /* sidebar width */
+  /* Removed dropdown specific styles as it's no longer used */
+  .sidebar {
+    position: fixed; /* hamesha left side pe fix rahe */
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh; /* pure screen height cover kare */
+    background: #0d1117;
+    padding: 25px 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* agar content zyada ho to scroll aaye */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* hamesha content ke upar rahe */
   }
   
+  /* baki styles wahi rakh sakte ho jo maine pehle diye the */
+    

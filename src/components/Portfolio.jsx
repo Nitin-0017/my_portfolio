@@ -1,41 +1,57 @@
-import React, { useState } from "react";
+// Projects.jsx
+import React from "react";
 import "../styles/Portfolio.css";
 
-function Portfolio() {
-  const [filter, setFilter] = useState("all");
+const projects = [
+  {
+    title: "",
+    description: "A web app that fetches live weather data based on location, displaying temperature, humidity, and forecasts.",
+    tech: ["HTML", "CSS", "JavaScript", "API"],
+    image: "/projects/weather-app.png",
+    github: "#",
+    live: "#"
+  },
+  {
+    title: "Resume Shortlister",
+    description: "An application to automatically filter and shortlist resumes based on keywords and skills for recruiters.",
+    tech: ["React", "Node.js", "MongoDB"],
+    image: "/projects/resume-shortlister.png",
+    github: "#",
+    live: "#"
+  },
+  {
+    title: "Memphis Design",
+    description: "A Design made to get an experience of applying CSS in a project",
+    tech: ["HTML", "CSS"],
+    image: "/projects/dot-boxes.png",
+    github: "#",
+    live: "#"
+  }
+];
 
-  const projects = [
-    { id: 1, title: "E-commerce Website", category: "web", image: "/images/portfolio1.jpg" },
-    { id: 2, title: "Portfolio Website", category: "web", image: "/images/portfolio2.jpg" },
-    { id: 3, title: "Mobile App UI", category: "app", image: "/images/portfolio3.jpg" },
-    { id: 4, title: "Data Analytics Dashboard", category: "web", image: "/images/portfolio4.jpg" },
-    { id: 5, title: "Branding Design", category: "design", image: "/images/portfolio5.jpg" },
-  ];
-
-  const filteredProjects =
-    filter === "all"
-      ? projects
-      : projects.filter((project) => project.category === filter);
-
+const Projects = () => {
   return (
-    <section id="portfolio" className="portfolio">
-      <div className="portfolio-container">
-        <h2>Portfolio</h2>
-
-        <div className="portfolio-filters">
-          <button onClick={() => setFilter("all")} className={filter === "all" ? "active" : ""}>All</button>
-          <button onClick={() => setFilter("web")} className={filter === "web" ? "active" : ""}>Web</button>
-          <button onClick={() => setFilter("app")} className={filter === "app" ? "active" : ""}>App</button>
-          <button onClick={() => setFilter("design")} className={filter === "design" ? "active" : ""}>Design</button>
-        </div>
-
-        <div className="portfolio-grid">
-          {filteredProjects.map((project) => (
-            <div className="portfolio-item" key={project.id}>
-              <img src={project.image} alt={project.title} />
-              <div className="portfolio-overlay">
+    <section className="projects" id="portfolio">
+      <div className="projects-container">
+        <h2>My Projects</h2>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div className="project-card" key={index}>
+              <div className="project-image">
+                <img src={project.image} alt={project.title} />
+              </div>
+              <div className="project-info">
                 <h3>{project.title}</h3>
-                <p>{project.category.toUpperCase()}</p>
+                <p>{project.description}</p>
+                <div className="tech-stack">
+                  {project.tech.map((tech, i) => (
+                    <span key={i}>{tech}</span>
+                  ))}
+                </div>
+                <div className="project-links">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a href={project.live} target="_blank" rel="noopener noreferrer">Live</a>
+                </div>
               </div>
             </div>
           ))}
@@ -43,6 +59,6 @@ function Portfolio() {
       </div>
     </section>
   );
-}
+};
 
-export default Portfolio;
+export default Projects;
