@@ -70,10 +70,9 @@ const Navbar = () => {
           <div className="profile">
             <img src="./NavBar.jpeg" alt="profile" className="profile-img"/>
             <div className="social-links">
-              <a href="#"><SiLeetcode /></a>
-              <a href="#"><SiCodeforces /></a>
-              <a href="#"><FaLinkedin /></a>
-              <a href="#"><FaGithub /></a>
+              <a href="https://leetcode.com/u/NITIN_0017/"><SiLeetcode /></a>
+              <a href="https://www.linkedin.com/in/nitin-kumar--/"><FaLinkedin /></a>
+              <a href="https://github.com/Nitin-0017/"><FaGithub /></a>
             </div>
           </div>
           <nav className="nav-menu">

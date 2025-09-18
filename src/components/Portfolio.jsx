@@ -4,44 +4,45 @@ import "../styles/Portfolio.css";
 
 const projects = [
   {
-    title: "Weather App",
-    description: "A web app that fetches live weather data based on location, displaying temperature, humidity, and forecasts.",
-    tech: ["HTML", "CSS", "JavaScript", "API"],
-    image: "./calculator.png",
-    github: "#",
-    live: "#"
+    title: "Inventory Management",
+    description: "An inventory management project helps track, organize, and optimize stock levels to ensure smooth business operations and reduce losses.",
+    tech: ["HTML","CSS","JavaScript","React"],
+    image: "./inventory.png",
+    github: "https://github.com/Nitin-0017/inventory_management",
+    live: "https://inventory-management-e5fa-kidq3qi46-nitin-0017s-projects.vercel.app/"
   },
   {
-    title: "Resume Shortlister",
-    description: "An application to automatically filter and shortlist resumes based on keywords and skills for recruiters.",
-    tech: ["React", "Node.js", "MongoDB"],
+    title: "E-Commerce Website (SwiftKart)",
+    description: "It is an e-commerce website that offers a seamless shopping experience with easy browsing, secure checkout, and fast delivery.",
+    tech: ["HTML","CSS","JavaScript","React"],
     image: "./swifkart.png",
-    github: "#",
-    live: "#"
+    github: "https://github.com/Nitin-0017/ecommerce-assignment",
+    live: "https://ecommerce-assignment-dhzx.vercel.app/"
+  },
+
+  {
+    title: "Calculator App",
+    description: "It is a Calculator built to perform basic arithmetic operations quickly and accurately.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    image: "./calculator.png",
+    github: "https://github.com/Nitin-0017/Calculator",
+    live: "https://nitin-0017.github.io/Calculator/"
+  },
+  {
+    title: "BMI Calculator",
+    description: "It  helps users check their Body Mass Index and track their health easily.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    image: "./bmicalculator.png",
+    github: "https://github.com/Nitin-0017/BMI_Calculator",
+    live: "https://nitin-0017.github.io/BMI_Calculator/"
   },
   {
     title: "Memphis Design",
     description: "A design project made to experiment with applying CSS creatively.",
     tech: ["HTML", "CSS"],
     image: "./memphisdesign.png",
-    github: "#",
-    live: "#"
-  },
-  {
-    title: "Portfolio Website",
-    description: "Personal portfolio built with React showcasing projects, skills, and resume.",
-    tech: ["React", "CSS", "JavaScript"],
-    image: "./bmicalculator.png",
-    github: "#",
-    live: "#"
-  },
-  {
-    title: "Task Manager",
-    description: "A productivity app for creating, updating, and organizing daily tasks with local storage support.",
-    tech: ["React", "Bootstrap"],
-    image: "./inventory.png",
-    github: "#",
-    live: "#"
+    github: "https://github.com/Nitin-0017/Capstone_Project",
+    live: "https://nitin-0017.github.io/Capstone_Project/"
   }
 ];
 
@@ -62,7 +63,7 @@ const Projects = () => {
             className="projects-flex"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }} // <--- ye scroll ke sath repeat ke liye
+            viewport={{ once: false, amount: 0.3 }} 
             variants={{
               hidden: {},
               visible: { transition: { staggerChildren: 0.2 } }
