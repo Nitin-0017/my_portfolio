@@ -1,7 +1,7 @@
 .skills {
   position: relative;
-  margin-left: 270px; /* Sidebar space */
-  min-height: 100vh; /* Full viewport height */
+  margin-left: 270px; 
+  min-height: 100vh; 
   padding: 60px 50px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #0f0202;
@@ -89,7 +89,7 @@
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 25px;
   }
 

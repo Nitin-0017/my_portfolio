@@ -1,72 +1,84 @@
-/* ------------------- SIDEBAR ------------------- */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 250px;
-  height: 100vh;
-  background: #0d1117;
-  padding: 25px 20px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: auto;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
-  z-index: 1000;
+
+.sidebar { position: fixed; top:0; left:0; width:250px; height:100vh; background:#0d1117; padding:25px 20px; color:#fff; display:flex; flex-direction:column; align-items:center; overflow-y:auto; z-index:1000; }
+
+
+.profile { text-align:center; margin-bottom:30px; }
+.profile-img { width:120px; height:120px; border-radius:50%; border:3px solid #1f232a; object-fit:cover; margin-bottom:15px; transition: transform 0.3s; }
+.profile-img:hover { transform: scale(1.05); }
+.profile-name { font-size:20px; font-weight:600; color:#fff; }
+
+
+.social-links { display:flex; gap:14px; margin-bottom:25px; }
+.social-links a { width:40px; height:40px; background:#1b1f27; display:flex; align-items:center; justify-content:center; color:#aaa; font-size:20px; border-radius:50%; transition:0.3s; }
+.social-links a:hover { background:#00aaff; color:#fff; transform: translateY(-4px) scale(1.1); }
+
+
+.nav-menu { width:100%; margin-top:20px; }
+.nav-menu ul { list-style:none; padding:0; margin:0; }
+.nav-menu li { margin:18px 0; }
+.nav-menu a { display:flex; align-items:center; gap:14px; color:#aaa; text-decoration:none; font-size:16px; padding:10px 14px; border-radius:8px; transition:0.3s; }
+.nav-menu a:hover, .nav-menu a.active { background:#1b1f27; color:#00aaff; transform:translateX(4px); }
+
+/* Mobile Navbar */
+.navbar-mobile { display:none; position:fixed; top:0; left:0; width:100%; background:#0d1117; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; z-index:1001; color:#fff; }
+.hamburger { cursor:pointer; }
+.mobile-menu { display:flex; flex-direction:column; background:#0d1117; }
+.mobile-menu a { padding:12px 20px; color:#fff; text-decoration:none; transition:0.3s; }
+.mobile-menu a.active, .mobile-menu a:hover { background:#1b1f27; }
+
+/* Responsive */
+@media(max-width:900px) {
+  .sidebar { display:none; }
+  .navbar-mobile { display:flex; }
+  .hero,.about,.projects,.resume,.skills,.contact {
+    margin-left:0 !important;
+    padding-top:80px;
+    width:100%;
+    overflow-x:hidden;
+  }
 }
 
-/* Profile Section */
-.profile { text-align: center; margin-bottom: 30px; }
-.profile-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #1f232a; object-fit: cover; margin-bottom: 15px; transition: transform 0.3s; }
-.profile-img:hover { transform: scale(1.05); }
-.profile-name { font-size: 20px; font-weight: 600; margin-bottom: 15px; color: #fff; }
-
-/* Social Links */
-.social-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 25px; }
-.social-links a { width: 40px; height: 40px; background: #1b1f27; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 20px; transition: all 0.3s ease; }
-.social-links a:hover { background: #00aaff; color: #fff; transform: translateY(-4px) scale(1.1); }
-
-/* Navigation Menu */
-.nav-menu { width: 100%; margin-top: 20px; }
-.nav-menu ul { list-style: none; padding: 0; margin: 0; width: 100%; }
-.nav-menu li { margin: 18px 0; }
-.nav-menu a { display: flex; align-items: center; gap: 14px; color: #aaa; text-decoration: none; font-size: 16px; padding: 10px 14px; border-radius: 8px; transition: all 0.3s ease; }
-.nav-menu a:hover { background: #1b1f27; color: #00aaff; transform: translateX(4px); }
-.nav-menu a.active { background: #1b1f27; color: #00aaff; transform: translateX(4px); }
-.icon { font-size: 18px; }
-
-/* ------------------- HAMBURGER ------------------- */
+/* Mobile hamburger */
 .navbar-mobile {
   display: none;
   position: fixed;
+  top: 15px;
+  left: 15px; /* left side */
+  z-index: 1001;
+}
+
+/* Mobile slide-out menu */
+.mobile-menu {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 250px; 
+  height: 100vh;
   background: #0d1117;
-  padding: 15px 20px;
+  padding: 80px 20px 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1001;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+}
+
+/* Links inside mobile menu */
+.mobile-menu a {
   color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
-.hamburger { cursor: pointer; color: #fff; }
-
-/* ------------------- RESPONSIVE ------------------- */
-@media (max-width: 900px) {
-  .navbar-mobile { display: flex; }
-
-  .sidebar {
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-
-  /* Main content full width */
-  .hero, .about, .contact, .resume, .portfolio, .skills {
-    margin-left: 0 !important;
-    padding: 80px 20px 20px 20px; /* space for top navbar */
-    width: 100%;
-  }
+.mobile-menu a:hover,
+.mobile-menu a.active {
+  background: #1b1f27;
+  color: #00aaff;
 }
+
+/* Hide horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+

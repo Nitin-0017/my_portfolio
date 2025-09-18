@@ -1,9 +1,72 @@
-
-*{
-padding: 0;
-margin: 0;
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* ------------------- MOBILE HAMBURGER ------------------- */
+.navbar-mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0d1117;
+  padding: 12px 15px;
+  justify-content: flex-start; /* left align */
+  z-index: 1001;
+}
+
+/* Only hamburger icon visible */
+.navbar-mobile .hamburger {
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* ------------------- SIDEBAR ------------------- */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: #0d1117;
+  padding: 25px 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+/* Profile, social links, nav-menu remain same */
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 900px) {
+  .navbar-mobile { display: flex; }
+
+  .sidebar {
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-300px); /* initially hidden */
   }
+
+  /* Animate sidebar when open via framer-motion */
+  .sidebar.open { transform: translateX(0); }
+
+  /* Main content full width */
+  .hero, .about, .contact, .resume, .portfolio, .skills {
+    margin-left: 0 !important;
+    padding: 80px 20px 20px 20px; /* top space for hamburger */
+    width: 100%;
+  }
+}

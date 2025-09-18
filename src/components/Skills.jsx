@@ -32,7 +32,7 @@ function Skills() {
   className="skills-grid"
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.3 }} // <--- scroll ke sath
+  viewport={{ once: false, amount: 0.3 }} 
   variants={{
     hidden: {},
     visible: { transition: { staggerChildren: 0.15 } }

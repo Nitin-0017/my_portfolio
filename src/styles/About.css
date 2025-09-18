@@ -1,6 +1,6 @@
 .about {
   position: relative;
-  margin-left: 270px; /* Sidebar space desktop */
+  margin-left: 270px; 
   min-height: 100vh;
   padding: 40px 20px;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,11 +118,11 @@
   margin-top: 15px;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .about {
-    margin-left: 0; /* full width */
-    padding: 100px 20px 20px 20px; /* top space for navbar */
+    margin-left: 0; 
+    padding: 100px 20px 20px 20px; 
   }
 
   .about-container {

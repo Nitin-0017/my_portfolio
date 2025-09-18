@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  margin-left: 270px; /* Sidebar space desktop */
+  margin-left: 270px; 
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-/* Background image full cover */
+
 .hero-background img {
   position: absolute;
   top: 0;
@@ -73,12 +73,12 @@
   transform: translateY(-3px);
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
-    margin-left: 0; /* remove sidebar space */
-    padding: 100px 20px 20px 20px; /* top space for hamburger navbar */
+    margin-left: 0; 
+    padding: 100px 20px 20px 20px; 
     text-align: center;
   }
 

@@ -7,6 +7,7 @@ import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop"
 import "./App.css";
 
 function App() {
@@ -46,7 +47,9 @@ function App() {
         </section>
       </main>
 
-      <Footer />
+      <BackToTop />
+<Footer />
+
     </>
   );
 }

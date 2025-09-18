@@ -59,14 +59,14 @@ const Projects = () => {
         </motion.h2>
 
         <motion.div
-  className="projects-flex"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: false, amount: 0.3 }} // <--- ye scroll ke sath repeat ke liye
-  variants={{
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.2 } }
-  }}
+            className="projects-flex"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }} // <--- ye scroll ke sath repeat ke liye
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.2 } }
+            }}
 >
 
           {projects.map((project, index) => (
