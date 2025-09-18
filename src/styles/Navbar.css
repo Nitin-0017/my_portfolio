@@ -1,130 +1,72 @@
-/* Sidebar Layout */
+/* ------------------- SIDEBAR ------------------- */
 .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background: #0d1117;
-    padding: 25px 20px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  /* Profile Section */
-  .profile {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #1f232a;
-    object-fit: cover;
-    margin-bottom: 15px;
-    transition: transform 0.3s;
-  }
-  
-  .profile-img:hover {
-    transform: scale(1.05);
-  }
-  
-  .profile-name {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #fff;
-  }
-  
-  /* Social Links */
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin-bottom: 25px;
-  }
-  
-  .social-links a {
-    width: 40px;
-    height: 40px;
-    background: #1b1f27;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #aaa;
-    font-size: 20px;
-    transition: all 0.3s ease;
-  }
-  
-  .social-links a:hover {
-    background: #00aaff;
-    color: #fff;
-    transform: translateY(-4px) scale(1.1);
-  }
-  
-  /* Navigation Menu */
-  .nav-menu {
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  .nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  
-  .nav-menu li {
-    margin: 18px 0;
-  }
-  
-  .nav-menu a {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    color: #aaa;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 14px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-menu a:hover {
-    background: #1b1f27;
-    color: #00aaff;
-    transform: translateX(4px);
-  }
-  
-  .icon {
-    font-size: 18px;
-  }
-  
-  /* Removed dropdown specific styles as it's no longer used */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: #0d1117;
+  padding: 25px 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+/* Profile Section */
+.profile { text-align: center; margin-bottom: 30px; }
+.profile-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #1f232a; object-fit: cover; margin-bottom: 15px; transition: transform 0.3s; }
+.profile-img:hover { transform: scale(1.05); }
+.profile-name { font-size: 20px; font-weight: 600; margin-bottom: 15px; color: #fff; }
+
+/* Social Links */
+.social-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 25px; }
+.social-links a { width: 40px; height: 40px; background: #1b1f27; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 20px; transition: all 0.3s ease; }
+.social-links a:hover { background: #00aaff; color: #fff; transform: translateY(-4px) scale(1.1); }
+
+/* Navigation Menu */
+.nav-menu { width: 100%; margin-top: 20px; }
+.nav-menu ul { list-style: none; padding: 0; margin: 0; width: 100%; }
+.nav-menu li { margin: 18px 0; }
+.nav-menu a { display: flex; align-items: center; gap: 14px; color: #aaa; text-decoration: none; font-size: 16px; padding: 10px 14px; border-radius: 8px; transition: all 0.3s ease; }
+.nav-menu a:hover { background: #1b1f27; color: #00aaff; transform: translateX(4px); }
+.nav-menu a.active { background: #1b1f27; color: #00aaff; transform: translateX(4px); }
+.icon { font-size: 18px; }
+
+/* ------------------- HAMBURGER ------------------- */
+.navbar-mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0d1117;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1001;
+  color: #fff;
+}
+.hamburger { cursor: pointer; color: #fff; }
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 900px) {
+  .navbar-mobile { display: flex; }
+
   .sidebar {
-    position: fixed; /* hamesha left side pe fix rahe */
+    height: 100%;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 100vh; /* pure screen height cover kare */
-    background: #0d1117;
-    padding: 25px 20px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto; /* agar content zyada ho to scroll aaye */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000; /* hamesha content ke upar rahe */
   }
-  
-  /* baki styles wahi rakh sakte ho jo maine pehle diye the */
-    
+
+  /* Main content full width */
+  .hero, .about, .contact, .resume, .portfolio, .skills {
+    margin-left: 0 !important;
+    padding: 80px 20px 20px 20px; /* space for top navbar */
+    width: 100%;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "../styles/Skills.css";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPython, FaDatabase } from "react-icons/fa";
 import { SiJavascript, SiLeetcode } from "react-icons/si";
@@ -17,19 +18,42 @@ function Skills() {
 
   return (
     <section id="skills" className="skills">
-      
-
-      {/* Content */}
       <div className="skills-container">
-        <h2>My Tech Stack</h2>
-        <div className="skills-grid">
+        <motion.h2
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          My Tech Stack
+        </motion.h2>
+
+        <motion.div
+  className="skills-grid"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.3 }} // <--- scroll ke sath
+  variants={{
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.15 } }
+  }}
+>
+
           {skills.map((skill, index) => (
-            <div className="skill-card" key={index}>
+            <motion.div
+            className="skill-card"
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
+          
               <div className="icon">{skill.icon}</div>
               <p>{skill.name}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -27,9 +27,22 @@
 }
 
 .skills-container h2 {
-  font-size: 42px;
-  margin-bottom: 50px;
-  color: #010a0a;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 70px;
+  color: #222;
+  position: relative;
+}
+
+.skills-container h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, #003366, #00c6ff);
+  border-radius: 2px;
 }
 
 /* Skills Grid - Square layout */

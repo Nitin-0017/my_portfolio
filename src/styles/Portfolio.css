@@ -1,7 +1,7 @@
 .projects {
     margin-left: 270px; /* sidebar space */
-    padding: 60px 50px;
-    min-height: 100vh;
+    padding: 40px 40px;
+    min-height: auto;
     background-color: #f5f5f5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
@@ -12,24 +12,21 @@
   }
   
   .projects-container h2 {
-    font-size: 42px;
     text-align: center;
-    margin-bottom: 50px;
-    color: #003366;
+    font-size: 36px;
     font-weight: 700;
-    letter-spacing: 1px;
+    margin-bottom: 70px;
+    color: #222;
     position: relative;
   }
   
   .projects-container h2::after {
     content: "";
-    position: absolute;
+    display: block;
     width: 80px;
-    height: 4px;
-    background: #0072ff;
-    left: 50%;
-    bottom: -15px;
-    transform: translateX(-50%);
+    height: 3px;
+    margin: 14px auto 0;
+    background: linear-gradient(90deg, #003366, #00c6ff);
     border-radius: 2px;
   }
   
@@ -37,7 +34,7 @@
   .projects-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 10rem;
     justify-content: center;
   }
   
@@ -127,12 +124,12 @@
   }
   
   .project-links a:last-child {
-    background: #0072ff;
+    background: #0056b3;
     color: #fff;
   }
   
   .project-links a:last-child:hover {
-    background: #0056b3;
+    background: #003366;
   }
   
   /* RESPONSIVE */

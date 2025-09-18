@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "../styles/Portfolio.css";
 
 const projects = [
@@ -48,10 +49,36 @@ const Projects = () => {
   return (
     <section className="projects" id="portfolio">
       <div className="projects-container">
-        <h2>My Projects</h2>
-        <div className="projects-flex">
+        <motion.h2
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          My Projects
+        </motion.h2>
+
+        <motion.div
+  className="projects-flex"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.3 }} // <--- ye scroll ke sath repeat ke liye
+  variants={{
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.2 } }
+  }}
+>
+
           {projects.map((project, index) => (
-            <div className="project-card" key={index}>
+            <motion.div
+            className="project-card"
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.3 }} // <--- scroll ke sath repeat
+          >
+          
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
               </div>
@@ -68,9 +95,9 @@ const Projects = () => {
                   <a href={project.live} target="_blank" rel="noopener noreferrer">Live</a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
