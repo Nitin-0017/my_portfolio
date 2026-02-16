@@ -30,7 +30,6 @@ const About = () => {
           About Me
         </motion.h2>
 
-        {/* Intro paragraphs with stagger */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -41,13 +40,10 @@ const About = () => {
           viewport={{ once: true }}
         >
           {[
-            `Hi! I'm Nitin Kumar, an aspiring Full Stack Developer with a passion
-            for building modern, efficient, and user-friendly web applications.
-            Skilled in Python, HTML, CSS, JavaScript, React, Node.js, and SQL,
-            I enjoy solving challenging problems and turning ideas into functional software.`,
-            `Over the years, I’ve solved 250+ Leetcode problems and maintained a strong
-            competitive programming rating of 1500+. When I’m not coding, I enjoy
-            exploring new technologies and working on creative side projects.`
+            `Hi! I'm Nitin Kumar, a Full Stack Developer passionate about building scalable and user-friendly web applications. I work with JavaScript, React, Node.js, Python, and SQL to transform ideas into real-world digital products. Alongside web development, I also explore data analysis using Pandas, NumPy, and Excel to build data-driven solutions.`
+            ,
+            `I’ve solved 400+ problems on LeetCode and maintain a competitive programming rating of 1530+, which strengthens my problem-solving and algorithmic thinking. I enjoy learning new technologies, collaborating with teams, and building projects that create real impact.`
+
           ].map((text, i) => (
             <motion.p
               className="about-intro"
@@ -74,7 +70,6 @@ const About = () => {
           Personal Info
         </motion.h3>
 
-        {/* Info Grid with stagger */}
         <motion.ul
           className="about-info"
           initial="hidden"
@@ -104,7 +99,6 @@ const About = () => {
           ))}
         </motion.ul>
 
-        {/* Bottom description */}
         <motion.p
           className="about-description"
           initial={{ opacity: 0, y: 40 }}
