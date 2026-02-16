@@ -34,8 +34,8 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          Aspiring Full Stack Developer skilled in Python, HTML, CSS, JavaScript, React, Node.js,
-          and SQL, with over 250+ solved Leetcode questions and a Contest Rating of 1500+.
+          Aspiring Full Stack Developer skilled in Python, HTML, CSS, JavaScript, React, Node.js, MongoDb,
+          and SQL, with over 400+ solved Leetcode questions and a Contest Rating of 1500+.
         </motion.p>
 
         <motion.a
