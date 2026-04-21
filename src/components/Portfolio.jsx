@@ -15,7 +15,7 @@ const projects = [
     title: "E-Commerce Website (SwiftKart)",
     description: "It is an e-commerce website that offers a seamless shopping experience with easy browsing, secure checkout, and fast delivery.",
     tech: ["HTML","CSS","JavaScript","React", "Node.js", "MongoDb"],
-    image: "./swifkart.png",
+    image: "./SwiftKart.png",
     github: "https://github.com/Nitin-0017/ecommerce-assignment",
     live: "https://ecommerce-assignment-ready.vercel.app/login"
   },

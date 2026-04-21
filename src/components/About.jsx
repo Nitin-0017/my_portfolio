@@ -42,7 +42,7 @@ const About = () => {
           {[
             `Hi! I'm Nitin Kumar, a Full Stack Developer passionate about building scalable and user-friendly web applications. I work with JavaScript, React, Node.js, Python, and SQL to transform ideas into real-world digital products. Alongside web development, I also explore data analysis using Pandas, NumPy, and Excel to build data-driven solutions.`
             ,
-            `I’ve solved 400+ problems on LeetCode and maintain a competitive programming rating of 1530+, which strengthens my problem-solving and algorithmic thinking. I enjoy learning new technologies, collaborating with teams, and building projects that create real impact.`
+            `I’ve solved 450+ problems on LeetCode and maintain a competitive programming rating of 1530+, which strengthens my problem-solving and algorithmic thinking. I enjoy learning new technologies, collaborating with teams, and building projects that create real impact.`
 
           ].map((text, i) => (
             <motion.p

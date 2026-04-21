@@ -5,18 +5,6 @@ import { HiLocationMarker } from "react-icons/hi";
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 
 function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Message Sent");
-    setForm({ name: "", email: "", subject: "", message: "" });
-  };
-
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
@@ -73,57 +61,6 @@ function Contact() {
             );
           })}
 
-          {/* Right Side */}
-          <motion.form
-            className="contact-form"
-            onSubmit={handleSubmit}
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <div className="form-row">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={form.name}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={form.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={form.subject}
-              onChange={handleChange}
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={form.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-            <motion.button
-              type="submit"
-              className="send-btn"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Send Message
-            </motion.button>
-          </motion.form>
         </motion.div>
       </div>
     </section>

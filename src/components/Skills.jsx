@@ -2,7 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../styles/Skills.css";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPython, FaDatabase } from "react-icons/fa";
-import { SiJavascript, SiLeetcode } from "react-icons/si";
+import { SiJavascript, SiLeetcode, SiNumpy, SiPandas, SiTableau } from "react-icons/si";
+import { BsFileExcel } from "react-icons/bs";
+import { BiPowerOff } from "react-icons/bi";
+import { PiPower } from "react-icons/pi";
 
 function Skills() {
   const skills = [
@@ -14,6 +17,10 @@ function Skills() {
     { name: "Python", icon: <FaPython color="#3776AB" size={60} /> },
     { name: "SQL", icon: <FaDatabase color="#4DB33D" size={60} /> },
     { name: "Problem Solving", icon: <SiLeetcode color="orange" size={60} /> },
+    { name: "Tableau", icon: <SiTableau color="skyblue" size={60} /> },
+    { name: "Excel", icon: <BsFileExcel color="green" size={60} /> },
+    { name: "Numpy", icon: <SiNumpy color="lightblue" size={60} /> },
+    { name: "Pandas", icon: <SiPandas color="#0b749bff" size={60} /> },
   ];
 
   return (
