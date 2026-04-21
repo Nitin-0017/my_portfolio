@@ -14,12 +14,19 @@ const projects = [
   {
     title: "E-Commerce Website (SwiftKart)",
     description: "It is an e-commerce website that offers a seamless shopping experience with easy browsing, secure checkout, and fast delivery.",
-    tech: ["HTML","CSS","JavaScript","React"],
+    tech: ["HTML","CSS","JavaScript","React", "Node.js", "MongoDb"],
     image: "./swifkart.png",
     github: "https://github.com/Nitin-0017/ecommerce-assignment",
-    live: "https://ecommerce-assignment-dhzx.vercel.app/"
+    live: "https://ecommerce-assignment-ready.vercel.app/login"
   },
-
+  {
+    title: "PathRise - An Intership Portal",
+    description: "PathRise is a full-stack recruitment platform that intelligently connects job seekers with recruiters through a streamlined, data-driven hiring experience.",
+    tech: ["HTML","CSS","JavaScript","React","Node.js", "MongoDb"],
+    image: "./pathrise.png",
+    github: "https://github.com/Nitin-0017/ecommerce-assignment",
+    live: "https://ecommerce-assignment-ready.vercel.app/login"
+  },
   {
     title: "Calculator App",
     description: "It is a Calculator built to perform basic arithmetic operations quickly and accurately.",

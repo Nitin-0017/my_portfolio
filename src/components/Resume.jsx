@@ -45,7 +45,6 @@ const Resume = () => {
           Resume
         </motion.h2>
 
-        {/* Education Section */}
         <motion.div
           className="resume-section"
           initial="hidden"
@@ -80,7 +79,6 @@ const Resume = () => {
           ))}
         </motion.div>
 
-        {/* Experience Section */}
         <motion.div
           className="resume-section"
           initial="hidden"

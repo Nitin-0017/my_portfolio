@@ -5,7 +5,6 @@ import "../styles/Hero.css";
 const Hero = () => {
   return (
     <section className="hero" id="home">
-      {/* Background image */}
       <div className="hero-background">
         <motion.img
           src="/profile.jpeg"
