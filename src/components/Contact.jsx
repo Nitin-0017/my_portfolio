@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "../styles/Contact.css";
 import { HiLocationMarker } from "react-icons/hi";
