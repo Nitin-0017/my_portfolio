@@ -10,6 +10,7 @@ function Footer() {
           <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="mailto:example@email.com">Email</a>
+          
         </div>
       </div>
     </footer>
